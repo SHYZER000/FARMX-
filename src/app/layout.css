@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+#navbar {
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  z-index: 1100; /* Ensures it stays above the sidebar if needed */
+  position: relative;
+  align-items: center;
+  /* background-color: rgb(209, 155, 117); */
+}
+
+/* Sidebar */
+#aside-bar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-right: 1px solid black;
+  background-color: white;
+  transition: transform 0.3s ease; /* Smooth slide animation */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Hidden sidebar (slide out to the left) */
+#aside-bar.hidden {
+  transform: translateX(-100%);
+}
+
+
+#nav-button img {
+    width: 35px;
+}
+
+#nav-button  {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-button  img:hover {
+  scale: 110%;
+  transition: all 0.5s;
+}
+
+ul {
+  padding: 0px;
+}
+
+
+#farmx-docs {
+   font-family: "Pixelify Sans", sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/* Main Topic and Subtopic styles */
+.topic, .sub-topic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: url("https://i.ibb.co/0pVbb8KQ/Slice-5-1-1.png") 0 0, auto;
+  background-color: #fdf2d1;
+  padding: 12px 18px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Pixelify Sans', sans-serif;
+  image-rendering: pixelated;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.topic:hover, .sub-topic:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #222;
+  background-color: #fff0b3;
+}
+
+.topic img, .sub-topic img {
+  image-rendering: pixelated;
+}
+
+.topic h4, .sub-topic h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+  transition: color 0.2s ease;
+}
+
+.topic:hover h4, .sub-topic:hover h4 {
+  color: #ff6347;
+}
+
+/* Subtopic animation container */
+.subtopic-container {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-5px);
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  margin-left: 20px;
+}
+
+.subtopic-container.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}

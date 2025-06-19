@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DocsTopics from './page'; // your DocsTopics component
+import DocsTopics from './docstopic'; // your DocsTopics component
 import './docstopic.css'; // contains animation styles below
 
 interface Topic {

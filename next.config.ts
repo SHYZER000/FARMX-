@@ -6,35 +6,26 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Apply CORS headers for your API route
+        // Routes this applies to
         source: "/APIs/(.*)",
+        // Headers
         headers: [
+          // Allow for specific domains to have access or * for all
           {
             key: "Access-Control-Allow-Origin",
-            value: "*", // Or replace with specific domain like "https://yourdomain.com"
+            value: "*",
+            // DOES NOT WORK
+            // value: process.env.ALLOWED_ORIGIN,
           },
+          // Allows for specific methods accepted
           {
             key: "Access-Control-Allow-Methods",
             value: "GET, POST, PUT, DELETE, OPTIONS",
           },
+          // Allows for specific headers accepted (These are a few standard ones)
           {
             key: "Access-Control-Allow-Headers",
             value: "Content-Type, Authorization",
-          },
-        ],
-      },
-      {
-        // Add Content Security Policy for ALL routes
-        source: "/(.*)",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: `
-              default-src 'self';
-              connect-src 'self' https://farmx-z67o.vercel.app;
-              script-src 'self' 'unsafe-inline';
-              style-src 'self' 'unsafe-inline';
-            `.replace(/\s{2,}/g, ' ').trim(),
           },
         ],
       },

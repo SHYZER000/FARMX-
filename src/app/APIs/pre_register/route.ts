@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
       message: "YOU REGISTERED FOR FARMX LAND AIRDROP",
       code: 2008
     });
-  } catch (err: any) {
+  } catch (err) {
     return NextResponse.json({
       message: err.message || "Something went wrong",
       code: 2009

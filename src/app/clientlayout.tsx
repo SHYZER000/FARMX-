@@ -1,7 +1,7 @@
 'use client';
 
 
-import DocsTopics from "./components/page";
+import DocsTopics from "./components/docstopic";
 import TopicGroup from "./components/topicgroup";
 import "./layout.css"
 
